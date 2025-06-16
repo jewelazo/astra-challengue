@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .models import Project
-from .serializers import ProjectSerializer
+from .models import Project, Task
+from .serializers import ProjectSerializer, TaskSerializer
 from rest_framework import generics, status
 from rest_framework.response import Response
 # Create your views here.
@@ -15,3 +15,15 @@ class ProjectDetailAPIView(generics.GenericAPIView):
             project_serializer = ProjectSerializer(project)
             return Response(project_serializer.data, status=status.HTTP_200_OK)
         return Response({"message": "Does not exist that id project"}, status=status.HTTP_400_BAD_REQUEST)
+    
+class TaskApiView(generics.GenericAPIView):
+    """
+    API view to list tasks.
+    """
+    def get(self, request):
+        status_param = request.query_params.get('status')
+        tasks = Task.objects.all()
+        if status_param is not None:
+            tasks = tasks.filter(status=status_param)
+        tasks_serializer = TaskSerializer(tasks, many=True)
+        return Response(tasks_serializer.data, status=status.HTTP_200_OK)
