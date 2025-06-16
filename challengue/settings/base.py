@@ -1,5 +1,11 @@
 from pathlib import Path
+import environ
+import os
 
+env = environ.Env()
+environ.Env.read_env(
+    os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
+)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,6 +35,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     # Add your local apps here
+    'apps.blog'
 ]
 
 THIRD_APPS = [
