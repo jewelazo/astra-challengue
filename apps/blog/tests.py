@@ -26,13 +26,13 @@ class PostAPITestCase(APITestCase):
         url = reverse("posts-list")
         response = self.client.get(url, format="json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 2)
+        self.assertEqual(len(response.data["results"]), 2)
 
     def test_delete_post(self):
         post = Post.objects.create(
             title="To Delete", content="Will be deleted.", author="Author 3"
         )
         url = reverse("posts-detail", args=[post.id])
-        response = self.client.delete(url)
+        response = self.client.delete(url, HTTP_X_AUTHOR="Author 3")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Post.objects.count(), 0)
