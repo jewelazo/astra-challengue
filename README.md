@@ -30,5 +30,29 @@
 ```
             (env) python manage.py runserver
 ```
+11) Run unitests
+```
+            (env) python manage.py test apps.blog
+```
+# Debugging
+```
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
 
-  
+    def validate_title(self, value):
+        if len(value) < 5:
+            raise serializers.ValidationError("Title too short")
+        return value
+
+    def create(self, validated_data):
+        # This method is redundant since ModelSerializer already implements it by default.
+        return Post.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        # The Post model has a field named 'title', not 'titulo'.
+        instance.titulo = validated_data.get('title', instance.title) # Post model has field title and not titulo
+        instance.save()
+        return instance
+```
