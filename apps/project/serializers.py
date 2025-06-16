@@ -11,6 +11,13 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ['id', 'created_at', 'updated_at']
 
+class TaskStatusUpdateSerializer(serializers.ModelSerializer):
+    """
+    Serializer to update only the status of a Task.
+    """
+    class Meta:
+        model = Task
+        fields = ['status']
 class ProjectSerializer(serializers.ModelSerializer):
     """
     Serializer for the Project model.

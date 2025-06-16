@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import Project, Task
-from .serializers import ProjectSerializer, TaskSerializer
+from .serializers import ProjectSerializer, TaskSerializer, TaskStatusUpdateSerializer
 from rest_framework import generics, status
 from rest_framework.response import Response
 # Create your views here.
@@ -27,3 +27,18 @@ class TaskApiView(generics.GenericAPIView):
             tasks = tasks.filter(status=status_param)
         tasks_serializer = TaskSerializer(tasks, many=True)
         return Response(tasks_serializer.data, status=status.HTTP_200_OK)
+    
+
+class TaskDetailAPIView(generics.GenericAPIView):
+    """
+    API view to get a specific task by ID.
+    """
+    def patch(self, request, pk=None):
+        task = Task.objects.filter(pk=pk).first()
+        if task:
+            task_serializer = TaskStatusUpdateSerializer(task, data=request.data)
+            if task_serializer.is_valid():
+                task_serializer.save()
+                return Response(TaskSerializer(task).data, status=status.HTTP_200_OK)
+            return Response(task_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"message": "Does not exist that id task"}, status=status.HTTP_400_BAD_REQUEST)
