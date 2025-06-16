@@ -22,15 +22,19 @@
 ```
             (env) pip install -r requirements.txt
 ```
-9) Run Migrations:
+9) Create your .env file:
+```
+            (env) cp .env.example .env
+```
+10) Run Migrations:
 ```
             (env) python manage.py migrate
 ```
-10) Go to project folder and run this command:
+11) Go to project folder and run this command:
 ```
             (env) python manage.py runserver
 ```
-11) Run unitests
+12) Run unitests
 ```
             (env) python manage.py test apps.blog
 ```
