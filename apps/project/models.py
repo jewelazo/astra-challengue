@@ -29,7 +29,7 @@ class Task(models.Model):
     status = models.SmallIntegerField(
         choices=TaskStatus.choices, default=TaskStatus.PENDING
     )
-    due_date = models.DateTimeField()
+    due_date = models.DateField()
     project = models.ForeignKey(Project, related_name="tasks", on_delete=models.CASCADE)
     responsible = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)

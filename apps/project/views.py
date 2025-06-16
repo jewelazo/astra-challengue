@@ -36,6 +36,12 @@ class TaskApiView(generics.GenericAPIView):
         tasks_serializer = TaskSerializer(tasks, many=True)
         return Response(tasks_serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request):
+        task_serializer = TaskSerializer(data=request.data)
+        if task_serializer.is_valid():
+            task_serializer.save()
+            return Response(task_serializer.data, status=status.HTTP_201_CREATED)
+        return Response(task_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class TaskDetailAPIView(generics.GenericAPIView):
     """
