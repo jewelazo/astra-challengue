@@ -35,7 +35,8 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     # Add your local apps here
-    'apps.blog'
+    'apps.blog',
+    'apps.project',
 ]
 
 THIRD_APPS = [
