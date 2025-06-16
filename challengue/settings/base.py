@@ -35,13 +35,13 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     # Add your local apps here
-    'apps.blog',
-    'apps.project',
+    "apps.blog",
+    "apps.project",
 ]
 
 THIRD_APPS = [
-    'rest_framework',
-] 
+    "rest_framework",
+]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 
