@@ -60,3 +60,9 @@ class PostSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 ```
+
+## Final Note
+
+Due to time constraints, I wasn't able to implement the bonus parts of the challenge. However, I’m familiar with the required concepts and technologies.
+
+Given more time, I would have gladly included them to further demonstrate my technical skills and attention to detail.
