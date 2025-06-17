@@ -1,0 +1,374 @@
+[
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "How to Start with Django",
+      "content": "This post explains how to set up your first Django project.",
+      "author": "Alice",
+      "created_at": "2025-06-15T10:00:00Z",
+      "updated_at": "2025-06-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Understanding Models in Django",
+      "content": "A deeper dive into Django's ORM and model relationships.",
+      "author": "Bob",
+      "created_at": "2025-06-16T10:00:00Z",
+      "updated_at": "2025-06-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Creating REST APIs with DRF",
+      "content": "An introduction to Django REST Framework.",
+      "author": "Carol",
+      "created_at": "2025-06-17T10:00:00Z",
+      "updated_at": "2025-06-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Deploying Django to Heroku",
+      "content": "A step-by-step guide to deploy a Django app to Heroku.",
+      "author": "Dave",
+      "created_at": "2025-06-18T10:00:00Z",
+      "updated_at": "2025-06-18T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Handling Forms in Django",
+      "content": "Working with forms, ModelForms, and validation.",
+      "author": "Emma",
+      "created_at": "2025-06-19T10:00:00Z",
+      "updated_at": "2025-06-19T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Using Django Admin Effectively",
+      "content": "Tips to customize and enhance the Django admin site.",
+      "author": "Frank",
+      "created_at": "2025-06-20T10:00:00Z",
+      "updated_at": "2025-06-20T10:00:00Z"  
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Class-based Views vs Function-based Views",
+      "content": "When to use CBVs and FBVs in Django.",
+      "author": "Grace",
+      "created_at": "2025-06-21T10:00:00Z",
+      "updated_at": "2025-06-21T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Django Signals Explained",
+      "content": "How to use signals like post_save and pre_delete.",
+      "author": "Hannah",
+      "created_at": "2025-06-22T10:00:00Z",
+      "updated_at": "2025-06-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Building a Blog with Django",
+      "content": "Step-by-step guide to building a simple blog.",
+      "author": "Isaac",
+      "created_at": "2025-06-23T10:00:00Z",
+      "updated_at": "2025-06-23T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Custom User Models in Django",
+      "content": "Best practices for extending or replacing the User model.",
+      "author": "Julia",
+      "created_at": "2025-06-24T10:00:00Z",
+      "updated_at": "2025-06-24T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Adding Authentication to Your API",
+      "content": "Token authentication with Django REST Framework.",
+      "author": "Kevin",
+      "created_at": "2025-06-25T10:00:00Z",
+      "updated_at": "2025-06-25T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "File Uploads in Django",
+      "content": "Handle file and image uploads with forms and models.",
+      "author": "Laura",
+      "created_at": "2025-06-26T10:00:00Z",
+      "updated_at": "2025-06-26T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Testing in Django",
+      "content": "Unit tests, integration tests, and the test client.",
+      "author": "Mike",
+      "created_at": "2025-06-27T10:00:00Z",
+      "updated_at": "2025-06-27T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Working with Django Templates",
+      "content": "Template language, context rendering, and inheritance.",
+      "author": "Nina",
+      "created_at": "2025-06-28T10:00:00Z",
+      "updated_at": "2025-06-28T10:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "fields": {
+      "title": "Django Performance Tips",
+      "content": "How to optimize your Django apps for speed and scalability.",
+      "author": "Oscar",
+      "created_at": "2025-06-29T10:00:00Z",
+      "updated_at": "2025-06-29T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.project",
+    "fields": {
+      "name": "Website Redesign",
+      "description": "Update the company website with a new design.",
+      "created_at": "2025-06-15T10:00:00Z",
+      "updated_at": "2025-06-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.project",
+    "fields": {
+      "name": "Mobile App Development",
+      "description": "Build the mobile app for Android and iOS.",
+      "created_at": "2025-06-16T10:00:00Z",
+      "updated_at": "2025-06-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.project",
+    "fields": {
+      "name": "Marketing Campaign",
+      "description": "Launch a new product marketing campaign.",
+      "created_at": "2025-06-17T10:00:00Z",
+      "updated_at": "2025-06-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Create wireframes",
+      "description": "Sketch out wireframes for new pages.",
+      "status": 0,
+      "due_date": "2025-07-01",
+      "project": 1,
+      "responsible": "Alice",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Review color palette",
+      "description": "Choose final colors for redesign.",
+      "status": 1,
+      "due_date": "2025-07-05",
+      "project": 1,
+      "responsible": "Bob",
+    "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Implement homepage layout",
+      "description": "",
+      "status": 0,
+      "due_date": "2025-07-10",
+      "project": 1,
+      "responsible": "Charlie",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Optimize images",
+      "description": "Compress and upload web-optimized images.",
+      "status": 2,
+      "due_date": "2025-07-12",
+      "project": 1,
+      "responsible": "Dana",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "QA testing",
+      "description": "Test across browsers and devices.",
+      "status": 1,
+      "due_date": "2025-07-15",
+      "project": 1,
+      "responsible": "Eli",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Design mobile UI",
+      "description": "Create mockups for mobile screens.",
+      "status": 0,
+      "due_date": "2025-07-02",
+      "project": 2,
+      "responsible": "Fiona",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Set up Firebase backend",
+      "description": "",
+      "status": 1,
+      "due_date": "2025-07-06",
+      "project": 2,
+      "responsible": "George",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Implement login screen",
+      "description": "Allow users to log in with email or Google.",
+      "status": 0,
+      "due_date": "2025-07-08",
+      "project": 2,
+      "responsible": "Hannah",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Push notifications",
+      "description": "Send daily reminders.",
+      "status": 2,
+      "due_date": "2025-07-11",
+      "project": 2,
+      "responsible": "Ivan",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Test on real devices",
+      "description": "Run tests on both Android and iOS phones.",
+      "status": 1,
+      "due_date": "2025-07-14",
+      "project": 2,
+      "responsible": "Jade",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Define campaign goals",
+      "description": "Establish KPIs and key outcomes.",
+      "status": 0,
+      "due_date": "2025-07-03",
+      "project": 3,
+      "responsible": "Kyle",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Create ad assets",
+      "description": "Design banners and social media posts.",
+      "status": 0,
+      "due_date": "2025-07-07",
+      "project": 3,
+      "responsible": "Lana",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Launch email campaign",
+      "description": "Send newsletter to subscribers.",
+      "status": 1,
+      "due_date": "2025-07-09",
+      "project": 3,
+      "responsible": "Max",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Social media posts",
+      "description": "",
+      "status": 2,
+      "due_date": "2025-07-13",
+      "project": 3,
+      "responsible": "Nina",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "project.task",
+    "fields": {
+      "name": "Collect feedback",
+      "description": "Survey users after the campaign ends.",
+      "status": 0,
+      "due_date": "2025-07-16",
+      "project": 3,
+      "responsible": "Oscar",
+      "created_at": "2025-07-01T10:00:00Z",
+      "updated_at": "2025-07-01T10:00:00Z"
+    }
+  }
+]
