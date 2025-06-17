@@ -1,10 +1,45 @@
 # Astra Challengue
 
-# Getting Started
-1) Create a new directory.
-2) Open your favourite IDE and then open your directory. 
-3) Open the terminal in working directory:
-4) Clone this repository:
+## Installation
+
+### Using Docker
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jewelazo/astra-challengue.git
+   cd astra-challengue
+   ```
+
+2. Create `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Build and run with Docker:
+   ```bash
+   docker compose up --build
+   ```
+4. Execute:
+    ```bash
+    # Apply database migrations
+    docker compose exec web python manage.py migrate
+
+    # Load initial data
+    docker compose exec web python manage.py loaddata load_data.json 
+    
+    The application will be available at: `http://localhost:8000`
+
+    # You can run unitests
+    docker compose exec web python manage.py test apps.blog
+
+    ```
+
+### Without Docker
+
+1. Create a new directory.
+2. Open your favourite IDE and then open your directory. 
+3. Open the terminal in working directory:
+4. Clone this repository:
 ```
            git clone https://github.com/jewelazo/astra-challengue.git
 ```
@@ -22,19 +57,15 @@
 ```
             (env) pip install -r requirements.txt
 ```
-9) Create your .env file:
-```
-            (env) cp .env.example .env
-```
-10) Run Migrations:
+9) Run Migrations:
 ```
             (env) python manage.py migrate
 ```
-11) Go to project folder and run this command:
+10) Go to project folder and run this command:
 ```
             (env) python manage.py runserver
 ```
-12) Run unitests
+11) Run unitests
 ```
             (env) python manage.py test apps.blog
 ```
@@ -51,18 +82,54 @@ class PostSerializer(serializers.ModelSerializer):
         return value
 
     def create(self, validated_data):
-        # This method is redundant since ModelSerializer already implements it by default.
         return Post.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        # The Post model has a field named 'title', not 'titulo'.
-        instance.titulo = validated_data.get('title', instance.title) # Post model has field title and not titulo
+        instance.titulo = validated_data.get('title', instance.title)
         instance.save()
         return instance
 ```
 
-## Final Note
+- Solution:
+```
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
 
-Due to time constraints, I wasn't able to implement the bonus parts of the challenge. However, I’m familiar with the required concepts and technologies.
+    def validate_title(self, value):
+        if len(value) < 5:
+            raise serializers.ValidationError("Title too short")
+        return value
 
-Given more time, I would have gladly included them to further demonstrate my technical skills and attention to detail.
+    def update(self, instance, validated_data):
+        # The Post model has a field named 'title', not 'titulo'.
+        # Add more fields to update
+        instance.title = validated_data.get('title', instance.title)
+        instance.content = validated_data.get('content', instance.content)
+        instance.author = validated_data.get('author', instance.author)
+        instance.save()
+        return instance
+```
+
+## API Endpoints 
+
+You can test the API using [Postman](https://www.postman.com/) or any REST client.
+
+- POST {{base_url}}/api/posts/               # Create post
+- GET  {{base_url}}/api/posts/               # Get all posts
+- GET  {{base_url}}/api/posts/{id}/          # Get post by id
+- PUT  {{base_url}}/api/posts/{id}/          # Update post by id (replace)
+- PATCH {{base_url}}/api/posts/{id}/         # Partial update post by id
+- DELETE {{base_url}}/api/posts/{id}/        # Delete post by id
+- GET {{base_url}}/api/project/{id}/         # Get project detail
+- GET {{base_url}}/api/tasks/{id}/           # Get task detail
+- GET {{base_url}}/api/tasks/                # Get all tasks
+
+
+
+##  Updates coming soon ...
+
+📄 Add API documentation with Swagger/OpenAPI
+
+💾 Add user authentication and authorization
